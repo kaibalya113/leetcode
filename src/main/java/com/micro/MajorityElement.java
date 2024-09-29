@@ -1,35 +1,54 @@
 package com.micro;
 
-public class MajorityElement {
+import java.util.Arrays;
+import java.util.HashMap;
+import java.util.Map;
+
+public class MajorityElement { // O(n)
     public static void main(String[] args){
-        int[] nums = new int[]{2,2,1,1,1,2,2};
+        int[] nums = new int[]{3,2,3}; // 2,3,3
+        //System.out.println(MajorityElementOutput(nums));
+        System.out.println(MajorityElementout(nums));
+    }
 
-        // this is voting algorithm
-        // we will take first no is highest
-        int pos=0;
-        int count =0;
-        for(int i=0; i<nums.length; i++){
-            if(nums[pos] == nums[i])
+    private static int MajorityElementout(int[] nums) {
+        if(nums.length <= 1){
+            return 0;
+        }
+        int major = nums[0];
+        int count = 1;
+        for (int i =0; i< nums.length; i++){
+            if(major == nums[i]){
                 count++;
-            else
+            }else{
                 count--;
-            if(count==0){
-                count=1;
-                pos=i;
             }
-        }
-
-        count =0;
-        for(int i=0; i<nums.length; i++){
-            if(nums[pos]==nums[i]){
+            if(count == 0){
+                major = nums[i];
                 count++;
             }
         }
-        if(count<= (nums.length/2)){
-            System.out.println("-1");
-        }else{
-            System.out.println(nums[pos]);
+        return major;
+    }
+
+    public static int MajorityElementOutput(int[] nums){
+        if(nums.length == 0){
+            return 0;
         }
-        //System.out.println(high);
+//        nums = Arrays.stream(nums).sorted().toArray();
+        Map<Integer, Integer> map = new HashMap<>();
+        for(int i =0 ; i< nums.length; i++){
+            if(map.containsKey(nums[i])){
+                map.put(nums[i], map.get(nums[i])+1);
+            }else{
+                map.put(nums[i], 1);
+            }
+        }
+        for(Map.Entry<Integer, Integer> entry : map.entrySet()){
+            if (entry.getValue() > nums.length/2){
+                return entry.getKey();
+            }
+        }
+        return 0;
     }
 }

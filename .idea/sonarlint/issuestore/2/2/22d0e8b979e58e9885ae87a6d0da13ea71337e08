@@ -1,6 +1,6 @@
 
-	java:S101"MRename this class name to match the regular expression '^[A-Z][a-zA-Z0-9]*$'.(ºªíÕ8¬äèİù1J$79e6aa39-ec7c-4d59-b8e7-f6d85380fe1f
+	java:S101"MRename this class name to match the regular expression '^[A-Z][a-zA-Z0-9]*$'.(ºªíÕ8¬äèİù1J$f8568b10-ae46-4a20-a1cb-25864574f70d
 z
-java:S2589"7Remove this expression which always evaluates to "true"(·Ï“8™îİù1J$d1a2dc19-c289-4fa2-8bfe-d4f2703bdd67
-r	java:S106	"+Replace this use of System.out by a logger.(‡Ù¤“ıÿÿÿÿ8±äèİù1J$f9a6d9d9-a3c9-47cf-ae6c-ef7951de73c0
-m	java:S106"+Replace this use of System.out by a logger.(Îµ…8§»éİù1J$29254da0-0d67-4525-9e6f-dbfb7ff1839b
+java:S2589"7Remove this expression which always evaluates to "true"(·Ï“8™îİù1J$481ffa88-d862-4253-b255-3b3f047a2202
+r	java:S106	"+Replace this use of System.out by a logger.(‡Ù¤“ıÿÿÿÿ8±äèİù1J$d87d326a-5966-46e7-9fa4-c304598160f9
+m	java:S106"+Replace this use of System.out by a logger.(Îµ…8§»éİù1J$a2fd4b79-b8d9-4cf8-8fcb-394103fafb8c
